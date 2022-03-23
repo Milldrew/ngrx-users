@@ -1,1 +1,7 @@
 <h1>Users</h1>
+<div *ngFor="let user of users$ | async">
+  {{ user.name }}
+</div>
+
+<input [(ngModel)]="user" />
+<button (click)="add()">Add</button>
